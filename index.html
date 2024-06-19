@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(0 0 33);
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(4, 4, 73);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(158, 158, 231);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 130px 0;
+            align-items: center;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 3rem;
+        }
+
+        .leftsection .buttons {
+            padding: 50px 0;
+
+        }
+
+        .leftsection .btn {
+            font-size: 20px;
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .rightsection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        #element {
+            color: blueviolet;
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondsection .box {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 6vw;
+
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .image-top {
+            width: 35px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: rgb(133, 131, 131);
+            width: 150px;
+            font-size: 11px;
+            text-align: justify;
+
+        }
+
+        footer {
+            background-color: #0e0e1a;
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: rgb(118, 118, 118);
+            padding: 12px;
+        }
+
+        /* Popup styles */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: rgb(49, 49, 94);
+            color: #d8d8ea;
+            padding: 20px;
+            max-width: 80%;
+            max-height: 80%;
+            overflow-y: auto;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #888;
+        }
+
+        .close:hover {
+            color: #555;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .secondsection .vertical {
+                height: unset;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+
+            .secondsection .box {
+                width: 50vw;
+            }
+
+            .firstsection {
+                flex-direction: column-reverse;
+            }
+
+            .box {
+                flex-direction: column;
+            }
+
+            .leftsection {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .rightsection {
+                width: 72px !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightsection img {
+                width: 45vw;
+                margin-bottom: 73px;
+            }
+
+            .image-top {
+                top: 133px;
+            }
+
+            .secondsection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 80vw;
+                margin: auto;
+                height: 141vh;
+            }
+
+            body {
+                min-width: fit-content;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Jayaprakash's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#" onclick="togglePopup('aboutPopup')">About</a></li>
+                    <li><a href="#" onclick="togglePopup('skillsPopup')">Skills</a></li>
+                    <li><a href="#" onclick="togglePopup('projectsPopup')">Project</a></li>
+                    <li><a href="#" onclick="togglePopup('contactPopup')">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                <div>Hii, I am <span class="purple">JAYAPRAKASH</span></div>
+                <div>I am a </div>
+
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="Jayprakash_prusty_CV updated.pdf" download="Jayaprakash_Resume.pdf" class="btn">Download
+                        Resume</a>
+                    <a href="https://github.com/Jayaprakash002" target="_blank" class="btn">Visit GitHub</a>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png" alt="">
+
+            </div>
+
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="text-gray">What i have gained so far</span>
+            <h1>My Skills & Experiences</h1>
+            <div class="box">
+                <div class="vertical"><img class="image-top" src="java.png" alt="">
+                    <div class="vertical-title">
+                        JAVA
+                    </div>
+                    <div class="vertical-desc">I have learned the fundamentals of Java, including basic core concepts
+                        such as keywords and tokens, which form the building blocks of the language. I have also gained
+                        a solid understanding of Object-Oriented Programming (OOP) principles, file handling techniques,
+                        error handling mechanisms, and functions. These core Java concepts are essential for developing
+                        robust and efficient applications.</div>
+                </div>
+                <div class="vertical"><img class="image-top" src="php.png" alt="">
+                    <div class="vertical-title">
+                        PHP
+                    </div>
+                    <div class="vertical-desc">I have acquired comprehensive knowledge of PHP, covering all its core
+                        aspects. This includes understanding PHP syntax, variables, and data types, as well as mastering
+                        advanced concepts like sessions, cookies, and file handling. Additionally, I am proficient in
+                        database interactions using MySQL, error handling, and implementing security measures. This
+                        extensive understanding enables me to develop dynamic and secure web applications efficiently.
+                    </div>
+                </div>
+                <div class="vertical"><img class="image-top" src="c.png" alt="">
+                    <div class="vertical-title">
+                        C/C++
+                    </div>
+                    <div class="vertical-desc">I have gained a solid understanding of C/C++, mastering fundamental
+                        concepts such as variables, data types, and control structures. I am proficient in advanced
+                        topics like pointers, memory management, and file handling. Additionally, I have a strong grasp
+                        of object-oriented programming principles in C++, including classes, inheritance, and
+                        polymorphism. This comprehensive knowledge equips me to develop efficient and high-performance
+                        applications.</div>
+                </div>
+                <div class="vertical"><img class="image-top" src="python.jpeg" alt="">
+                    <div class="vertical-title">
+                        PYTHON
+                    </div>
+                    <div class="vertical-desc">I have developed a thorough understanding of Python, covering essential
+                        concepts such as variables, data types, and control structures. I am well-versed in advanced
+                        topics like list comprehensions, file handling, and exception handling. Additionally, I have a
+                        solid grasp of object-oriented programming, including classes and inheritance, as well as
+                        familiarity with popular libraries and frameworks like NumPy, pandas.</div>
+                </div>
+                <div class="vertical"><img class="image-top" src="js.png" alt="">
+                    <div class="vertical-title">
+                        HTML/CSS/JS
+                    </div>
+                    <div class="vertical-desc">I have a comprehensive understanding of web development, encompassing
+                        HTML, CSS, and JavaScript. With HTML, I am proficient in structuring web content using elements,
+                        attributes, and semantic tags. In CSS, I excel at styling web pages, utilizing selectors,
+                        properties, and responsive design techniques to create visually appealing layouts. My JavaScript
+                        skills include manipulating the DOM, handling events, and implementing interactive features to
+                        enhance user experiences. This robust foundation enables me to create dynamic and responsive web
+                        applications.</div>
+                </div>
+                <div class="vertical"><img class="image-top" src="db.png" alt="">
+                    <div class="vertical-title">
+                        MySQL/ORACLE
+                    </div>
+                    <div class="vertical-desc">I have gained extensive knowledge in database management using MySQL and
+                        Oracle. I am proficient in designing and managing databases, understanding and implementing
+                        complex SQL queries, and utilizing stored procedures, triggers, and views. Additionally, I have
+                        experience in optimizing database performance, ensuring data integrity, and managing
+                        transactions. This expertise enables me to effectively handle and manipulate large datasets,
+                        ensuring efficient and reliable database operations.</div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Jayaprakash's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>LinkedIn</li>
+                    <li>GitHub</li>
+                    <li>FaceBook</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169 jayaprakashportfolio.com | All rights reserved | 2024-2025
+        </div>
+    </footer>
+
+    <!-- Popups -->
+    <div id="aboutPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup('aboutPopup')">&times;</span>
+            <h2>About Me</h2>
+            <p>I am Jayaprakash, a highly skilled and motivated individual pursuing my Master's in Computer Applications
+                (MCA) at Srusti Academy of Management in Bhubaneswar. I graduated from Utkal University with a Bachelor
+                of Science in Geology, achieving an impressive 75% in 2022. My academic journey also includes completing
+                my Intermediate of Science from CHSE, Odisha, with a score of 67.34% in 2019, and matriculating from
+                BSE, Odisha, with a score of 72.67% in 2017.
+
+                Throughout my studies and personal projects, I have developed a robust skill set in various programming
+                languages and technologies. I have a solid foundation in Java, PHP, C/C++, and Python, along with
+                proficiency in web development using HTML, CSS, and JavaScript. My knowledge extends to database
+                management with MySQL and Oracle, where I can efficiently design, manage, and optimize databases.
+                Additionally, I have experience with popular Python libraries and frameworks like NumPy and pandas,
+                enabling me to handle complex data manipulation and analysis tasks.</p>
+        </div>
+    </div>
+
+    <div id="skillsPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup('skillsPopup')">&times;</span>
+            <h2>My Skills</h2>
+            <p>I am skilled in multiple programming languages, including PHP, Java, Python, and C/C++, each of which I
+                have mastered fundamental and advanced concepts, enabling me to develop robust and efficient
+                applications. In web development, I have a comprehensive understanding of HTML, CSS, and JavaScript,
+                allowing me to create dynamic and responsive web applications. Additionally, I am proficient in database
+                management with MySQL and Oracle, ensuring efficient and reliable database operations. Alongside my
+                technical skills, I excel in time management, leadership, teamwork, and problem-solving, which are
+                crucial for successful project execution and collaboration.</p>
+        </div>
+    </div>
+
+    <div id="projectsPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup('projectsPopup')">&times;</span>
+            <h2>My Projects</h2>
+            <p>I have successfully led and contributed to several significant projects, demonstrating my technical
+                expertise and leadership skills. One of my notable projects includes the development of a Feedback
+                Management Module for an ERP-based College Management System. Leading a team, I facilitated the
+                integration of this module, which allowed for admin updates, role-based user feedback, and access
+                control to review feedback. Another project involved creating a PHP-based Conference Management System,
+                where I spearheaded the development of admin tools and user interfaces, ensuring seamless event
+                registration, paper submissions, and interactive features like user feedback. Additionally, I developed
+                a Custom Incentive Management System using PHP, HTML, CSS, JS, and MySQL, where employees could track
+                incentives based on sales and choose their holiday packages.
+
+                In terms of certifications, I have completed a PGDCA course from Suvam Computers, Adaspur, Cuttack,
+                Cyber Security Essentials from Cisco Networking Academy, Introduction to AI from Infosys Springboard,
+                and Introduction to Machine Learning from NPTEL (IIT Kharagpur). My participation in workshops includes
+                attending sessions on “Product Development Lifecycle” by Google Developer Group (GDG) Cloud, BBSR,
+                “Developing And Deploying Your First Machine Learning Model on Google Cloud” by GDG Cloud, BBSR, and
+                “Null Events” by Null Community, Bhubaneswar. These experiences have enriched my knowledge and skills,
+                enabling me to excel in various technical and collaborative environments.</p>
+        </div>
+    </div>
+
+    <div id="contactPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup('contactPopup')">&times;</span>
+            <h2>Contact Me</h2>
+            <p>For any inquiries or to connect with me, please find my contact information below:
+
+                <p>JAYAPRAKASH PRUSTY</p>
+                <p>Bhadrak, Odisha</p>
+                <p>Mobile: 8917523881</p>
+                <p>Email: jayaprakashprusty546@gmail.com</p>
+                <p>LinkedIn: - https://www.linkedin.com/in/jayaprakash-prusty-0aa103256 </p>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['MCA Graduate', 'Fullstack Developer', 'Software Developer', 'Web Designer', 'ML/AI/Cyber Security Learner'],
+            typeSpeed: 80,
+            loop: true
+        });
+
+        function togglePopup(popupId) {
+            var popup = document.getElementById(popupId);
+            if (popup.style.display === "block") {
+                popup.style.display = "none";
+            } else {
+                popup.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
